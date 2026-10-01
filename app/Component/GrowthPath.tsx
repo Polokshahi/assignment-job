@@ -130,7 +130,7 @@ export default function GrowthSection() {
          <img
   src="/hero-image/3dIcon.png"
   alt="Wavy Shape"
-  className="absolute right-[10px]  z-30 w-[216px] h-auto object-contain pointer-events-none"
+  className="absolute -right-[50px] top-[20px]  z-30 w-[216px] h-auto object-contain pointer-events-none -rotate-12"
 />
         </div>
       </div>
@@ -186,7 +186,7 @@ export default function GrowthSection() {
           <img
             src="/hero-image/3dIcon.png"
             alt=""
-            className="absolute left-[330px] top-[130px] z-30 w-[216px] h-auto object-contain"
+            className="absolute left-[280px] top-[190px] z-30 w-[216px] h-auto object-contain rotate-30"
           />
 
           {/* Happy students */}
