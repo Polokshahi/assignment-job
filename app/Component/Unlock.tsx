@@ -41,7 +41,7 @@ const gridStyle: CSSProperties = {
 
 export default function Unlock() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0038E0] font-[Poppins,sans-serif]">
+    <section className="relative w-full  overflow-hidden bg-[#0038E0] font-[Poppins,sans-serif]">
       {/* Grid overlay */}
       <div
         aria-hidden="true"
@@ -56,9 +56,10 @@ export default function Unlock() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-[760px] flex-col items-center px-4 py-16 text-center text-white md:py-[68px]">
-        <h2 className="max-w-[460px] text-3xl font-semibold leading-[1.25] md:text-[40px]">
-          Unlock Your Potential as a Creator with ByteSpace
-        </h2>
+        <h2 className="max-w-[640px] text-3xl font-semibold leading-[1.25] md:text-[40px]">
+  Unlock Your Potential as a
+  <br className="hidden md:block" /> Creator with ByteSpace
+</h2>
 
         <p className="mt-8 text-sm leading-[1.75] md:mt-[38px]">
           Experience the collaboration of numerous creators and an expanding
