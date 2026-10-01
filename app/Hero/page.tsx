@@ -7,27 +7,27 @@ import Navbar from "../Navbar/page";
 // left/top = icon-er center (stage-er %), w = width (stage-er %).
 const slots = [
   {
-    src: "/image/3dIcon.png",
+    src: "/Image/3dIcon.png",
     className: "-left-[250px] top-[40%] w-[30%] rotate-45",
   },
   {
-    src: "/image/white-wave.png",
+    src: "/Image/white-wave.png",
     className: "left-[0%] top-[55%] w-[15%]",
   },
   {
-    src: "/image/Cone1.png",
+    src: "/Image/Cone1.png",
     className: "left-[15%] top-[83.5%] w-[20%]",
   },
   {
-    src: "/image/Cone.png",
+    src: "/Image/Cone.png",
     className: "left-[120%] top-[34.25%] w-[15%]",
   },
   {
-    src: "/image/Cone2.png",
+    src: "/Image/Cone2.png",
     className: "left-[105%] top-[45%] w-[15%]",
   },
   {
-    src: "/image/white-wave.png",
+    src: "/Image/white-wave.png",
     className: "left-[85%] top-[78.25%] w-[15%]",
   },
 ];
