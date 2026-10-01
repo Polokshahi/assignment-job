@@ -118,7 +118,7 @@ export default function HeroPage() {
             alt=""
             aria-hidden="true"
             draggable={false}
-            className={`pointer-events-none absolute z-10 hidden h-auto -translate-x-1/2 -translate-y-1/2 select-none sm:block ${s.className}`}
+            className={`pointer-events-none absolute z-10  h-auto -translate-x-1/2 -translate-y-1/2 select-none  ${s.className}`}
           />
         ))}
 
