@@ -1,56 +1,60 @@
 import type { CSSProperties } from "react";
 
 type SlotProps = {
-  label: string;
-  className: string;
-  tone?: "lime" | "white";
+  src: string;
+  className: string; // position + size
 };
 
-// Icon-er jaiga: pore replace kore <Image /> ba <svg /> boshiye nio
-function IconSlot({ label, className, tone = "lime" }: SlotProps) {
+function IconSlot({ src, className }: SlotProps) {
   return (
-    <div
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt=""
       aria-hidden="true"
-      className={`pointer-events-none absolute flex items-center justify-center rounded-2xl border-2 border-dashed text-xs font-medium ${
-        tone === "lime"
-          ? "border-[#D4FF1F] bg-[#D4FF1F]/30 text-[#D4FF1F]"
-          : "border-white bg-white/30 text-white"
-      } ${className}`}
-    >
-      {label}
-    </div>
+      draggable={false}
+      className={`pointer-events-none absolute select-none object-contain ${className}`}
+    />
   );
 }
 
+// Shob icon-e ekhon ek-i image. Pore protita-r path alada kore nio.
+
+
+const icons: SlotProps[] = [
+  { src: "/Image/3dIcon.png", className: "-left-[118px] -top-[140px] h-[385px] w-[385px] rotate-50" },
+  { src: "/Image/white-wave.png", className: "left-[200px] top-[28px] hidden h-[175px] w-[175px] md:block -rotate-10" },
+  { src: "/Image/Cone-green.png", className: "right-[160px] top-[18px] hidden h-[188px] w-[188px] md:block" },
+  { src: "/Image/Cone-white.png", className: "-right-6 top-[55px] h-[200px] w-[110px] md:h-[275px] md:w-[150px]" },
+  { src: "/Image/Cone2.png", className: "-left-[70px] bottom-[70px] hidden h-[188px] w-[188px] md:block -rotate-28" },
+  { src: "/Image/Cone-ring-green.png", className: "-bottom-[100px] left-[55px] h-[342px] w-[342px]" },
+  { src: "/Image/3dIcon.png", className: "-bottom-[150px] right-[65px] hidden h-[330px] w-[330px] md:block" },
+];
+
 const gridStyle: CSSProperties = {
-  position: "absolute",
-  inset: 0,                      // top/right/bottom/left = 0, puro section cover
-  width: "100%",
-  height: "100%",
-  opacity: 1,
   mixBlendMode: "hard-light",
   backgroundImage:
     "linear-gradient(rgba(255,255,255,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.25) 1px, transparent 1px)",
   backgroundSize: "95px 95px",
-  backgroundPosition: "center top", // line-gulo majhkhan theke shomobhabe soray
+  backgroundPosition: "center top",
 };
 
 export default function Unlock() {
   return (
     <section className="relative w-full overflow-hidden bg-[#0038E0] font-[Poppins,sans-serif]">
       {/* Grid overlay */}
-      <div className="pointer-events-none absolute top-0" style={gridStyle} />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={gridStyle}
+      />
 
-      {/* Icon placeholders: choto screen-e kichu hide kora */}
-      <IconSlot label="Squiggle" className="-left-2.5 -top-2.5 h-[130px] w-[130px]" />
-      <IconSlot label="Squiggle" tone="white" className="left-[165px] top-[28px] hidden h-[95px] w-[90px] md:flex" />
-      <IconSlot label="Cone" className="right-[160px] top-[18px] hidden h-[115px] w-[100px] md:flex" />
-      <IconSlot label="Cylinder" tone="white" className="-right-6 top-[55px] h-[200px] w-[110px] md:h-[275px] md:w-[150px]" />
-      <IconSlot label="Cone" tone="white" className="-left-2 bottom-[70px] hidden h-[125px] w-[95px] md:flex" />
-      <IconSlot label="Torus" className="-bottom-[60px] left-[55px] h-[140px] w-[190px]" />
-      <IconSlot label="Squiggle" className="-bottom-[15px] right-[65px] hidden h-[130px] w-[115px] md:flex" />
+      {/* Icons */}
+      {icons.map((icon, i) => (
+        <IconSlot key={i} src={icon.src} className={icon.className} />
+      ))}
 
-      {/* Content: normal flow-e, tai height auto barbe */}
+      {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-[760px] flex-col items-center px-4 py-16 text-center text-white md:py-[68px]">
         <h2 className="max-w-[460px] text-3xl font-semibold leading-[1.25] md:text-[40px]">
           Unlock Your Potential as a Creator with ByteSpace
