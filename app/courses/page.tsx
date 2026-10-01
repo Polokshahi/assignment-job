@@ -18,7 +18,7 @@ export default function CoursesPage() {
   "https://randomuser.me/api/portraits/men/85.jpg",
 ];
 
-  // মোট ১৮টি কোর্স কার্ডের ডেটা
+ 
   const courses = [
     { id: 1, title: "Learn Figma from Basic", price: "$25", rating: "4.5", lessons: "17 Lessons", image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=500&auto=format&fit=crop&q=60", author: "by purepearl studio" },
     { id: 2, title: "Build Digital Asset", price: "$25", rating: "4.5", lessons: "17 Lessons", image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=500&auto=format&fit=crop&q=60", author: "by purepearl studio" },

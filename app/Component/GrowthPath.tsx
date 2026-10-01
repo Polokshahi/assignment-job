@@ -6,7 +6,7 @@ export default function GrowthSection() {
   return (
     <section className="relative w-full overflow-hidden bg-white">
       
-      {/* ================= TOP SECTION ================= */}
+     
       <div className="relative mx-auto min-h-[730px] w-full max-w-[1440px]">
         
         {/* Background glow */}
@@ -136,7 +136,7 @@ export default function GrowthSection() {
       </div>
 
 
-      {/* ================= BOTTOM SECTION ================= */}
+
       <div className="relative mx-auto min-h-[730px] w-full max-w-[1440px]">
 
         {/* Background glow */}
